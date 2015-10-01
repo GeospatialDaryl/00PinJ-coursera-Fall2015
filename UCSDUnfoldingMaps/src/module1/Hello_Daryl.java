@@ -2,6 +2,10 @@ package module1;
 
 import processing.core.PApplet;
 import processing.core.PImage;
+import java.awt.Image;
+import javax.imageio.ImageIO;
+import java.net.URL;
+
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
@@ -35,9 +39,18 @@ public class Hello_Daryl extends PApplet
 	
 	/** The map you will use to display your home town */ 
 	UnfoldingMap map2;
+	
+	private short xSize;
+	private short ySize;
 
+	private PImage backgroundImg;
+	
 	public void setup() {
-		size(900, 600, P2D);  // Set up the Applet window to be 800x600
+
+		xSize = 900;
+		ySize = 600;
+		
+		size(xSize, ySize, P2D);  // Set up the Applet window to be 800x600
 		                      // The OPENGL argument indicates to use the 
 		                      // Processing library's 2D drawing
 		                      // You'll learn more about processing in Module 3
@@ -45,7 +58,11 @@ public class Hello_Daryl extends PApplet
 		// This sets the background color for the Applet.  
 		// Play around with these numbers and see what happens!
 		//this.background(60, 0, 200);
-		this.background(PImage );
+		
+		String url = "http://thegraphicsfairy.com/wp-content/uploads/2013/07/Public-Domain-Patriotic-Label-GraphicsFairy.jpg";
+		backgroundImg = loadImage(url,"jpg");
+        backgroundImg.resize(xSize,ySize);
+		this.background( backgroundImg );
 		
 		// Select a map provider
 		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
@@ -77,6 +94,8 @@ public class Hello_Daryl extends PApplet
 
 	/** Draw the Applet window.  */
 	public void draw() {
+		backgroundImg.resize(0,ySize);
+		//image(backgroundImg,0,0)
 		map1.draw();
 		map2.draw();
 	}
