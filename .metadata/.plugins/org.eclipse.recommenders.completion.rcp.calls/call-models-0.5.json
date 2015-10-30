@@ -1,0 +1,22 @@
+{
+  "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\core.jar": {
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\core.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\core.jar\u0027. Neither fingerprint \u00274a90e563b4d39e637997adabac06395d4025f83f\u0027 nor symbolic name \u0027core\u0027 are known."
+  },
+  "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\unfolding.0.9.7-uscd.jar": {
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\unfolding.0.9.7-uscd.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\unfolding.0.9.7-uscd.jar\u0027. Neither fingerprint \u0027403865818933a1fce981e63ca356ac8fb88207ad\u0027 nor symbolic name \u0027unfolding.0.9.7-uscd\u0027 are known."
+  },
+  "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\src": {
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\src\u0027. Skipped."
+  }
+}

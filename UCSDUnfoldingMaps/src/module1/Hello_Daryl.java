@@ -66,6 +66,7 @@ public class Hello_Daryl extends PApplet
 		
 		// Select a map provider
 		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
+		//AbstractMapProvider provider = new de.fhpotsdam.unfolding.providers.OpenWeatherProvider.Clouds();
 		// Set a zoom level
 		int zoomLevel = 10;
 		

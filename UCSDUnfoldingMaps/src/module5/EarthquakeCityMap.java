@@ -145,7 +145,30 @@ public class EarthquakeCityMap extends PApplet {
 	// 
 	private void selectMarkerIfHover(List<Marker> markers)
 	{
-		// TODO: Implement this method
+		
+		float mX = this.mouseX;
+		float mY = this.mouseY;
+		Location mLoc = map.getLocation(mX,mY);
+		
+		
+		for(Marker mark : markers) {
+			  //if (mark.getLocation() == mLoc){
+			String prLine = String.valueOf(mLoc.getLon()) +" "+ String.valueOf(mLoc.getLat() ) + " - "+
+					mark.getLocation().toString() + String.valueOf(mark.isInside(map, mX, mY));
+			
+			System.out.println( prLine );
+			
+			//if ( mark.isInside(map, (float) mX , (float) mY ) ){
+			if ( mark.isInside(map, mX, mY )) {
+				if ( lastSelected == null ){
+					System.out.println( "found it!" );
+				    lastSelected = (CommonMarker) mark;
+				    mark.setSelected( true );
+				    lastSelected.setSelected( true );
+				    break;
+				}
+			  }		   
+		}
 	}
 	
 	/** The event handler for mouse clicks

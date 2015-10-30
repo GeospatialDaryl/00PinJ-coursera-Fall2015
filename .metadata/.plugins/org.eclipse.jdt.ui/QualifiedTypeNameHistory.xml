@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.image.Raster"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.providers.OpenWeatherProvider.CloudsClassic"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.providers.EsriProvider"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.providers.OpenWeatherProvider"/>
+<fullyQualifiedTypeName name="de.fhpotsdam.unfolding.providers.OpenWeatherProvider.Clouds"/>
+</qualifiedTypeNameHistroy>

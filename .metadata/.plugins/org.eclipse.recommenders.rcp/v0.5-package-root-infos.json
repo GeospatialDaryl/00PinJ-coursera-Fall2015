@@ -1,0 +1,340 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cc6c3983df2ecb5fbe0f53b273d957ca2f53438f",
+    "jarFileModificationDate": "2015-05-28T13:49:59.292-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2506365af3398e5008be1129a3839e81ccdb91e9",
+    "jarFileModificationDate": "2015-05-28T13:49:55.306-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\cldrdata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "971ceba47b6a610c4d5b084b679daa721058bb3b",
+    "jarFileModificationDate": "2015-05-28T13:49:55.311-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\nashorn.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f310b34aa0aec52b806a4ff4f0e02eb5565512f7",
+    "jarFileModificationDate": "2015-05-28T13:49:55.307-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "115c8aec254fc2e0fc71f240ec3f2e6962a693dd",
+    "jarFileModificationDate": "2015-05-28T13:49:59.416-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cda388ef38ce93e416bfbb4088e2bb91c5fd0a08",
+    "jarFileModificationDate": "2015-05-28T13:49:59.366-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "json4processing",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "08b303b1a699f17ab707a66d5d02d59bae9cbbc5",
+    "jarFileModificationDate": "2015-09-30T14:48:54.338-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\json4processing.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "gluegen-rt",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9e149bd4cc20855c0bf1baf59c51b176053808ef",
+    "jarFileModificationDate": "2015-09-30T14:48:54.319-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\gluegen-rt.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8abeb866dd408e58086d17f98e6f32b9a9c5051e",
+    "jarFileModificationDate": "2015-05-28T13:49:55.362-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc",
+    "version": {
+      "major": 3,
+      "minor": 7,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cea9f7f8e6bcb580d953a8651fb8391640de0f85",
+    "jarFileModificationDate": "2015-09-30T14:48:54.348-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\sqlite-jdbc-3.7.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "unfolding.0.9.7-uscd",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "403865818933a1fce981e63ca356ac8fb88207ad",
+    "jarFileModificationDate": "2015-09-30T14:48:54.349-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\unfolding.0.9.7-uscd.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4c517b0332501940a54306743c233c6e5e15d2b2",
+    "jarFileModificationDate": "2015-05-28T13:49:55.314-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "45c6e6479d995b75a782bf27159a60b650ee7ea6",
+    "jarFileModificationDate": "2015-05-28T13:49:55.366-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "libTUIO",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2a8b4ea6f36afa02deef9f5720e4e4a7e6fd2de5",
+    "jarFileModificationDate": "2015-09-30T14:48:54.339-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\libTUIO.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a1ed6667df3033d566f848019dd3d6672a1e1b30",
+    "jarFileModificationDate": "2015-05-28T13:49:55.384-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "log4j",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 15,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f0a0d2e29ed910808c33135a3a5a51bba6358f7b",
+    "jarFileModificationDate": "2015-09-30T14:48:54.341-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\log4j-1.2.15.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "54a1535cffe5b1930c3e3448f465012d63691dd2",
+    "jarFileModificationDate": "2015-05-28T13:49:59.917-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\jfxrt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c297405f1769bf3490cb79b70da4d058224443a9",
+    "jarFileModificationDate": "2015-05-28T13:49:55.316-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "827d11d21c1450dd10a15d53b46cfe42bd3522c5",
+    "jarFileModificationDate": "2015-05-28T13:49:55.308-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3f1050c75d139479eb4fc100936fc08a9385bd1",
+    "jarFileModificationDate": "2015-05-28T13:49:55.315-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "707544d832f1b331c205d025740607bc73312c52",
+    "jarFileModificationDate": "2015-05-28T13:49:55.301-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "de2e3b74db018347e0cd26e222e98a4b5bb902ec",
+    "jarFileModificationDate": "2015-05-28T13:49:59.551-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "core",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4a90e563b4d39e637997adabac06395d4025f83f",
+    "jarFileModificationDate": "2015-09-30T14:48:54.310-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "79ca23ce08662e635b27070c31e7b01fc37b1aac",
+    "jarFileModificationDate": "2015-05-28T13:49:55.313-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jogl-all",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1b448ebc2b850080f409e8aa4452b17756c53c09",
+    "jarFileModificationDate": "2015-09-30T14:48:54.336-07:00",
+    "location": "C:\\Users\\dkvandyke\\workspace\\00PinJ-coursera-Fall2015\\UCSDUnfoldingMaps\\lib\\jogl-all.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2a168e4dd5f0385ccde79ce9edf6643e6d1cbc97",
+    "jarFileModificationDate": "2015-05-28T13:49:55.312-07:00",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_45\\jre\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  }
+]
