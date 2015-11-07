@@ -1,9 +1,11 @@
 package module5;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import de.fhpotsdam.unfolding.UnfoldingMap;
+import de.fhpotsdam.unfolding.utils.GeoUtils;
 import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.GeoJSONReader;
 import de.fhpotsdam.unfolding.data.PointFeature;
@@ -57,10 +59,12 @@ public class EarthquakeCityMap extends PApplet {
 
 	// A List of country markers
 	private List<Marker> countryMarkers;
+	private List<Marker> listBothMarkers;
 	
 	// NEW IN MODULE 5
 	private CommonMarker lastSelected;
 	private CommonMarker lastClicked;
+
 	
 	public void setup() {		
 		// (1) Initializing canvas and map tiles
@@ -86,9 +90,10 @@ public class EarthquakeCityMap extends PApplet {
 		List<Feature> cities = GeoJSONReader.loadData(this, cityFile);
 		cityMarkers = new ArrayList<Marker>();
 		for(Feature city : cities) {
+			//city.markerType = "city";
 		  cityMarkers.add(new CityMarker(city));
 		}
-	    
+		
 		//     STEP 3: read in earthquake RSS feed
 	    List<PointFeature> earthquakes = ParseFeed.parseEarthquake(this, earthquakesURL);
 	    quakeMarkers = new ArrayList<Marker>();
@@ -106,7 +111,13 @@ public class EarthquakeCityMap extends PApplet {
 
 	    // could be used for debugging
 	    printQuakes();
-	 		
+
+	    /*
+	     *   Add both lists to make all markers list
+	     */
+		//listBothMarkers.addAll(cityMarkers);
+		//listBothMarkers.addAll(quakeMarkers);
+	    
 	    // (3) Add markers to map
 	    //     NOTE: Country markers are not added to the map.  They are used
 	    //           for their geometric properties
@@ -176,13 +187,84 @@ public class EarthquakeCityMap extends PApplet {
 	 * Or if a city is clicked, it will display all the earthquakes 
 	 * where the city is in the threat circle
 	 */
+	
+	
 	@Override
 	public void mouseClicked()
 	{
-		// TODO: Implement this method
-		// Hint: You probably want a helper method or two to keep this code
-		// from getting too long/disorganized
+		boolean gotOne = false;
+		float mX = this.mouseX;
+		float mY = this.mouseY;
+		Location mLoc = map.getLocation(mX,mY);
+		
+		if (lastClicked != null){
+			for(Marker mark : cityMarkers){
+				mark.setSelected(false);
+			}
+			for( Marker markQ : quakeMarkers){
+				markQ.setSelected(false);
+			}
+			//ELSE:  select one marker
+		}else{
+			//  for cityMarker
+			for(Marker mark : cityMarkers) {
+				if ( mark.isInside(map, mX, mY )) {
+					//find one marker: city
+					if(gotOne == false){
+						mark.setHidden(false);
+						mark.setSelected(true);
+						gotOne = true;
+						lastSelected = (CommonMarker) mark;
+					}
+				}
+			for(Marker mark2: quakeMarkers) {
+				if ( mark2.isInside(map, mX, mY )) {
+					//find all earthquakes within threat circle influence
+					if(gotOne == false){
+						mark.setHidden(false);
+						mark.setSelected(true);
+						gotOne = true;
+						lastSelected = (CommonMarker) mark;
+						}
+					}
+				}
+			}
+		}
+		if (gotOne){
+			for(Marker mark : cityMarkers) {
+				mark.setHidden(false);
+			}
+			for(Marker mark2: quakeMarkers) {
+				mark2.setHidden(false);
+			}
+		}
+		double distThreat = -1.;
+		if (lastSelected != null){
+			if ( lastSelected.markerType == "earthquake" ){
+				distThreat = ( (EarthquakeMarker) lastSelected).threatCircle();
+				for(Marker mark : cityMarkers) {
+					if ( mark.getLocation().getDistance( lastSelected.getLocation() ) < distThreat )  {
+						mark.setHidden(false);
+					}
+				}
+			}
+			distThreat = -1.;
+			if ( lastSelected.markerType == "city"){
+				for (Marker markQ : quakeMarkers){
+					distThreat =  ((EarthquakeMarker) markQ).threatCircle();
+					if ( lastSelected.getLocation().getDistance( markQ.getLocation() )  < distThreat ){
+						// within radius
+						markQ.setHidden(false);
+					}
+					else{
+						markQ.setHidden(true);
+					}
+				}
+			}
+		}
 	}
+				
+	
 	
 	
 	// loop over and unhide all markers

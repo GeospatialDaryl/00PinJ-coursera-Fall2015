@@ -1,5 +1,8 @@
 package module5;
 
+
+import javax.xml.soap.Text;
+
 import de.fhpotsdam.unfolding.data.PointFeature;
 import processing.core.PGraphics;
 
@@ -21,6 +24,8 @@ public abstract class EarthquakeMarker extends CommonMarker
 	// based on magnitude. 
 	protected float radius;
 	
+	//constant Marker Type
+	//protected String markerType = "earthquake";
 	
 	// constants for distance
 	protected static final float kmPerMile = 1.6f;
@@ -52,6 +57,8 @@ public abstract class EarthquakeMarker extends CommonMarker
 		properties.put("radius", 2*magnitude );
 		setProperties(properties);
 		this.radius = 1.75f*getMagnitude();
+		// set markerType
+		this.markerType = "earthquake";
 	}
 	
 
@@ -94,6 +101,8 @@ public abstract class EarthquakeMarker extends CommonMarker
 	public void showTitle(PGraphics pg, float x, float y)
 	{
 		// TODO: Implement this method
+		String dispLine = this.getTitle();
+		pg.text(dispLine, x - 10, y + 10);
 		
 	}
 

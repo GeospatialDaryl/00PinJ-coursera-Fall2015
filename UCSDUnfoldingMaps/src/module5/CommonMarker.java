@@ -14,6 +14,9 @@ public abstract class CommonMarker extends SimplePointMarker {
 
 	// Records whether this marker has been clicked (most recently)
 	protected boolean clicked = false;
+	//markerType
+	protected String markerType;
+	protected double critDist;
 	
 	public CommonMarker(Location location) {
 		super(location);
