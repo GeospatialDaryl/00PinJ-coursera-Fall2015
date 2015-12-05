@@ -32,7 +32,8 @@ public class EarthquakeCityMap extends PApplet {
 	// You will use many of these variables, but the only one you should need to add
 	// code to modify is countryQuakes, where you will store the number of earthquakes
 	// per country.
-	
+	//   verbose for debug
+	private static final boolean verbose = true;
 	// You can ignore this.  It's to get rid of eclipse warnings
 	private static final long serialVersionUID = 1L;
 
@@ -146,40 +147,46 @@ public class EarthquakeCityMap extends PApplet {
 			lastSelected = null;
 		
 		}
-		selectMarkerIfHover(quakeMarkers);
-		selectMarkerIfHover(cityMarkers);
+		//selectMarkerIfHover(quakeMarkers);
+		//selectMarkerIfHover(cityMarkers);
 	}
 	
 	// If there is a marker under the cursor, and lastSelected is null 
 	// set the lastSelected to be the first marker found under the cursor
 	// Make sure you do not select two markers.
 	// 
-	private void selectMarkerIfHover(List<Marker> markers)
-	{
+	private void selectMarkerIfHover(List<Marker> markers) {
+		Location mLoc = queryMouseLocation();
 		
-		float mX = this.mouseX;
-		float mY = this.mouseY;
-		Location mLoc = map.getLocation(mX,mY);
-		
-		
+		CommonMarker matchMark = findingMatchingMarker(markers, mLoc);
+	    matchMark.setSelected( true );
+	}
+	/**
+	 * @param markers
+	 * @return 
+	 */
+	private CommonMarker findingMatchingMarker(List<Marker> markers, Location mLoc) {
+		float mX = mLoc.x;
+		float mY = mLoc.y;
 		for(Marker mark : markers) {
 			  //if (mark.getLocation() == mLoc){
-			String prLine = String.valueOf(mLoc.getLon()) +" "+ String.valueOf(mLoc.getLat() ) + " - "+
+			if (verbose){
+				String prLine = String.valueOf(mLoc.getLat()) +" "+ String.valueOf(mLoc.getLon() ) + " - "+
 					mark.getLocation().toString() + String.valueOf(mark.isInside(map, mX, mY));
-			
-			System.out.println( prLine );
-			
+				System.out.println( prLine );
+				System.out.println(mLoc.toString());
+			}
 			//if ( mark.isInside(map, (float) mX , (float) mY ) ){
 			if ( mark.isInside(map, mX, mY )) {
 				if ( lastSelected == null ){
-					System.out.println( "found it!" );
+					if(verbose){ System.out.println( "found it!" ); }
 				    lastSelected = (CommonMarker) mark;
-				    mark.setSelected( true );
-				    lastSelected.setSelected( true );
-				    break;
+				    //mark.setSelected( true );
+				   ;
 				}
 			  }		   
 		}
+		return lastSelected;
 	}
 	
 	/** The event handler for mouse clicks
@@ -187,9 +194,8 @@ public class EarthquakeCityMap extends PApplet {
 	 * Or if a city is clicked, it will display all the earthquakes 
 	 * where the city is in the threat circle
 	 */
-	
-	
-	@Override
+	/*
+	 
 	public void mouseClicked()
 	{
 		boolean gotOne = false;
@@ -236,6 +242,119 @@ public class EarthquakeCityMap extends PApplet {
 			}
 			for(Marker mark2: quakeMarkers) {
 				mark2.setHidden(false);
+			}
+		}
+		double distThreat = -1.;
+		if (lastSelected != null){
+			if ( lastSelected.markerType == "earthquake" ){
+				distThreat = ( (EarthquakeMarker) lastSelected).threatCircle();
+				for(Marker mark : cityMarkers) {
+					if ( mark.getLocation().getDistance( lastSelected.getLocation() ) < distThreat )  {
+						mark.setHidden(false);
+					}
+				}
+			}
+			distThreat = -1.;
+			if ( lastSelected.markerType == "city"){
+				for (Marker markQ : quakeMarkers){
+					distThreat =  ((EarthquakeMarker) markQ).threatCircle();
+					if ( lastSelected.getLocation().getDistance( markQ.getLocation() )  < distThreat ){
+						// within radius
+						markQ.setHidden(false);
+					}
+					else{
+						markQ.setHidden(true);
+					}
+				}
+			}
+		
+	*/
+	private void initialize(){
+		boolean gotOne = false;
+		queryMouseLocation();
+	}
+
+	private Location queryMouseLocation() {
+		float mX = this.mouseX;
+		float mY = this.mouseY;
+		Location mLoc = map.getLocation(mX,mY);
+		return mLoc;
+	}
+	
+	private void clearAllSelections()  {
+		for(Marker mark : cityMarkers){
+			mark.setSelected(false);
+		}
+		for( Marker markQ : quakeMarkers){
+			markQ.setSelected(false);
+		}
+	}
+	
+	private void showAllMarkers()  {
+		for(Marker mark : cityMarkers)  {
+			mark.setHidden(false);
+		}
+		for( Marker markQ : quakeMarkers  ){
+			markQ.setHidden(false);
+		}
+	}
+	
+		
+	public CommonMarker clickedPoint( Location mLoc ) {
+		float mX = mLoc.x;
+		float mY = mLoc.y;
+		boolean gotOne = false;
+		boolean isQuake = false;
+		CommonMarker foundMarker = findingMatchingMarker(cityMarkers, mLoc);
+		if (foundMarker != null){
+			if (foundMarker.markerType == "city") {
+				clickedQCity(foundMarker);
+			}
+			if (foundMarker.markerType != "city") {
+				clickedEQuake(foundMarker);
+			}
+		}	
+		return foundMarker;
+	}
+
+	
+	private void clickedEQuake(CommonMarker foundMarker){
+		double mX = 0.;
+	}
+	
+	private void clickedQCity(CommonMarker foundMarker){
+		
+	}
+	
+	
+	@Override
+	public void mouseClicked()  {
+		
+		initialize();
+		
+		Location mLoc = queryMouseLocation();
+		
+		float mX = mLoc.x;
+		float mY = mLoc.y;
+		boolean gotOne = false;
+		
+		if (lastClicked != null){
+			//  last clicked is null, so we clear all, show all
+			clearAllSelections();
+			showAllMarkers();
+			lastSelected.setSelected( false );
+			lastClicked.setSelected( false );
+			//ELSE:  select one marker
+		}else{
+			CommonMarker foundMarker = clickedPoint(mLoc);
+			if(foundMarker != null){gotOne = true;}
+		}
+		if (gotOne){
+			for(Marker mark : cityMarkers) {
+				mark.setHidden(true);
+			}
+			for(Marker mark2: quakeMarkers) {
+				mark2.setHidden(true);
 			}
 		}
 		double distThreat = -1.;

@@ -5,10 +5,10 @@ INDEX VERSION 1.126+C:\Users\dkvandyke\workspace\00PinJ-coursera-Fall2015\.metad
 144572530.index
 3217635104.index
 3616180831.index
-4009614972.index
+2477091700.index
 3438167942.index
 3134414655.index
-2477091700.index
+4009614972.index
 3988822264.index
 2835790182.index
 1791709537.index
